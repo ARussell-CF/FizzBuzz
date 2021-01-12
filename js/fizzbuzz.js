@@ -1,10 +1,12 @@
-
 //This uses an anonymous function to call a named function
 document.getElementById("fizzButton").addEventListener("click", function () {
     let num1 = document.getElementById("input1").value;
     let num2 = document.getElementById("input2").value;
-    
-    runTheNumbers(num1, num2)
+    if (num1 > num2) {
+        alert("Number 1 must be less than Number 2");
+    } else {
+        runTheNumbers(num1, num2)
+    }
 });
 
 //This is the named function, it will only run when something else calls it
